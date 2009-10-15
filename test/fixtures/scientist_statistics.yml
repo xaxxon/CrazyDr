@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  scientist_id: 1
+  statistic_id: 1
+
+two:
+  scientist_id: 1
+  statistic_id: 1
