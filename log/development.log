@@ -1,0 +1,2834 @@
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20091015093532)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "recipe_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091015093532')[0m
+Migrating to CreateScientists (20091015093546)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "scientists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091015093546')[0m
+Migrating to CreateStatistics (20091015093758)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "statistics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091015093758')[0m
+Migrating to CreateScientistStatistics (20091015093818)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "scientist_statistics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "scientist_id" integer, "statistic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091015093818')[0m
+Migrating to CreateInventories (20091015093853)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "item_id" integer, "scientist_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091015093853')[0m
+Migrating to CreateIngredients (20091015094153)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "item_id" integer, "count" integer, "recipe_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091015094153')[0m
+Migrating to CreateRecipes (20091015094322)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "time" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091015094322')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("ingredients")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("inventories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("recipes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("scientist_statistics")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("scientists")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("statistics")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 02:56:14) [GET]
+
+ActionController::RoutingError (No route matches "/scientists" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 02:56:49) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 02:56:49) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 02:56:49) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 02:57:19) [GET]
+  [4;36;1mScientist Load (0.8ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+
+ActionView::MissingTemplate (Missing template scientists/index.erb in view path app/views):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 02:58:16) [GET]
+  [4;35;1mScientist Load (0.7ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+Completed in 74ms (View: 68, DB: 1) | 200 OK [http://localhost/scientists]
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 02:58:27) [GET]
+  [4;36;1mScientist Load (0.7ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #6 of app/views/scientists/index.html.haml:
+3: %ul
+4:   -@scientists.each do |scientist|
+5:     %li
+6:       =@scientist.name
+7:     
+
+    app/views/scientists/index.html.haml:6:in `_run_haml_app47views47scientists47index46html46haml'
+    app/views/scientists/index.html.haml:4:in `each'
+    app/views/scientists/index.html.haml:4:in `_run_haml_app47views47scientists47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (46.3ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 02:58:34) [GET]
+  [4;35;1mScientist Load (0.7ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+Completed in 78ms (View: 9, DB: 1) | 200 OK [http://localhost/scientists]
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:03) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:12) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:14) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:25) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:26) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:27) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (36.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:27) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (111.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:03:34) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:04:14) [GET]
+  [4;36;1mScientist Load (0.9ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+
+ActionView::TemplateError (undefined method `scientist_path' for #<ActionView::Base:0x224df7c>) on line #6 of app/views/scientists/index.html.haml:
+3: %ul
+4:   -@scientists.each do |scientist|
+5:     %li
+6:       =link_to scientist, scientist
+7:     
+
+    app/views/scientists/index.html.haml:6:in `_run_haml_app47views47scientists47index46html46haml'
+    app/views/scientists/index.html.haml:4:in `each'
+    app/views/scientists/index.html.haml:4:in `_run_haml_app47views47scientists47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:04:29) [GET]
+  [4;35;1mScientist Load (0.7ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+
+ActionView::TemplateError (undefined method `scientist_path' for #<ActionView::Base:0x233956c>) on line #6 of app/views/scientists/index.html.haml:
+3: %ul
+4:   -@scientists.each do |scientist|
+5:     %li
+6:       =link_to scientist.name, scientist
+7:     
+
+    app/views/scientists/index.html.haml:6:in `_run_haml_app47views47scientists47index46html46haml'
+    app/views/scientists/index.html.haml:4:in `each'
+    app/views/scientists/index.html.haml:4:in `_run_haml_app47views47scientists47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:04:33) [GET]
+  [4;36;1mScientist Load (0.7ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+
+ActionView::TemplateError (undefined method `scientist_path' for #<ActionView::Base:0x234b3c0>) on line #6 of app/views/scientists/index.html.haml:
+3: %ul
+4:   -@scientists.each do |scientist|
+5:     %li
+6:       =link_to scientist, scientist
+7:     
+
+    app/views/scientists/index.html.haml:6:in `_run_haml_app47views47scientists47index46html46haml'
+    app/views/scientists/index.html.haml:4:in `each'
+    app/views/scientists/index.html.haml:4:in `_run_haml_app47views47scientists47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:00) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (110.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:19) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (35.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:20) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:20) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (36.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:20) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:26) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:26) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (103.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:27) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:34) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.5ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:51) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (106.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:05:59) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:01) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:13) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:14) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:14) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:14) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:14) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:15) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:15) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:06:28) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 03:06:42) [GET]
+
+ActionController::RoutingError (No route matches "/scientist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 03:07:22) [GET]
+
+ActionController::RoutingError (No route matches "/scientist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 03:07:22) [GET]
+
+ActionController::RoutingError (No route matches "/scientist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 03:07:23) [GET]
+
+ActionController::RoutingError (No route matches "/scientist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 03:07:23) [GET]
+
+ActionController::RoutingError (No route matches "/scientist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 03:07:23) [GET]
+
+ActionController::RoutingError (No route matches "/scientist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 03:07:23) [GET]
+
+ActionController::RoutingError (No route matches "/scientist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:07:25) [GET]
+  [4;36;1mScientist Load (0.9ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+Completed in 90ms (View: 10, DB: 1) | 200 OK [http://localhost/scientists]
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-15 03:07:33) [GET]
+  [4;35;1mScientist Load (0.7ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering scientists/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/scientists]
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:08:26) [GET]
+  Parameters: {"id"=>"1"}
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:09:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mScientist Load (0.7ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering scientists/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/scientists/show.html.haml:
+1: %h1 Scientist #{@scientist.name}
+
+    app/views/scientists/show.html.haml:1:in `_run_haml_app47views47scientists47show46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:09:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mScientist Load (0.7ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering scientists/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/scientists/show.html.haml:
+1: %h1 Scientist #{@scientist.name}
+
+    app/views/scientists/show.html.haml:1:in `_run_haml_app47views47scientists47show46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:09:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mScientist Load (0.7ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering scientists/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/scientists/show.html.haml:
+1: %h1 Scientist #{@scientist.name}
+
+    app/views/scientists/show.html.haml:1:in `_run_haml_app47views47scientists47show46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (117.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:09:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mScientist Load (0.7ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering scientists/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/scientists/show.html.haml:
+1: %h1 Scientist #{@scientist.name}
+
+    app/views/scientists/show.html.haml:1:in `_run_haml_app47views47scientists47show46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:09:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mScientist Load (0.7ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering scientists/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/scientists/show.html.haml:
+1: %h1 Scientist #{@scientist.name}
+
+    app/views/scientists/show.html.haml:1:in `_run_haml_app47views47scientists47show46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-10-15 03:10:15) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/zhansen/crazydr/app/controllers/scientists_controller.rb:8: syntax error, unexpected '=', expecting kEND
+    @scientist = Scientist.find :id = id
+                                     ^):
+  
+
+Rendered rescues/_trace (30.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:10:21) [GET]
+  Parameters: {"id"=>"1"}
+
+ArgumentError (Unknown key(s): id):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:10:49) [GET]
+  Parameters: {"id"=>"1"}
+
+NoMethodError (private method `select' called for :all:Symbol):
+  app/controllers/scientists_controller.rb:8:in `show'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (33.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-15 03:10:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mScientist Load (0.7ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering scientists/show
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/scientists/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 10:23:35) [GET]
+
+ActionController::RoutingError (No route matches "/items" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:35:56) [GET]
+Rendering items/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:36:33) [GET]
+
+SyntaxError (/Users/zhansen/crazydr/app/models/item.rb:2: syntax error, unexpected ':', expecting kEND
+  belongs_to: recipe
+             ^):
+  app/controllers/items_controller.rb:3:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (113.5ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:36:48) [GET]
+
+SyntaxError (/Users/zhansen/crazydr/app/models/item.rb:2: syntax error, unexpected ':', expecting kEND
+  belongs_to: :recipe
+             ^):
+  app/controllers/items_controller.rb:3:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:36:52) [GET]
+
+SyntaxError (/Users/zhansen/crazydr/app/models/item.rb:2: syntax error, unexpected ':', expecting kEND
+  belongs_to: :recipe
+             ^):
+  app/controllers/items_controller.rb:3:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:36:55) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:37:27) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:37:35) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 38ms (View: 30, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:38:04) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.ingredients) on line #5 of app/views/items/index.html.haml:
+2: 
+3: -@items.each do |item|
+4:   =item.name
+5:   =item.recipe.ingredients
+
+    app/views/items/index.html.haml:5:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:38:11) [GET]
+  [4;35;1mItem Load (1.5ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:38:48) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #5 of app/views/items/index.html.haml:
+2: 
+3: -@items.each do |item|
+4:   =item.name
+5:   =item.recipe.time
+
+    app/views/items/index.html.haml:5:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:39:47) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:41:01) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #5 of app/views/items/index.html.haml:
+2: 
+3: -@items.each do |item|
+4:   =item.name
+5:   =item.recipe.item
+
+    app/views/items/index.html.haml:5:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:41:18) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:42:05) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:42:14) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:42:20) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:42:24) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:42:39) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #7 of app/views/items/index.html.haml:
+4:   =item.name
+5:   =item.recipe
+6:   =item.loaded_recipe? ? "YES" : "NO"
+7:   =item.recipe.time
+
+    app/views/items/index.html.haml:7:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:43:27) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #7 of app/views/items/index.html.haml:
+4:   =item.name
+5:   =item.recipe
+6:   =item.loaded_recipe? ? "YES" : "NO"
+7:   =item.recipe['time']
+
+    app/views/items/index.html.haml:7:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:43:28) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #7 of app/views/items/index.html.haml:
+4:   =item.name
+5:   =item.recipe
+6:   =item.loaded_recipe? ? "YES" : "NO"
+7:   =item.recipe['time']
+
+    app/views/items/index.html.haml:7:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (109.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:43:29) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #7 of app/views/items/index.html.haml:
+4:   =item.name
+5:   =item.recipe
+6:   =item.loaded_recipe? ? "YES" : "NO"
+7:   =item.recipe['time']
+
+    app/views/items/index.html.haml:7:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (114.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:43:29) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #7 of app/views/items/index.html.haml:
+4:   =item.name
+5:   =item.recipe
+6:   =item.loaded_recipe? ? "YES" : "NO"
+7:   =item.recipe['time']
+
+    app/views/items/index.html.haml:7:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (63.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:43:40) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 88ms (View: 81, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:43:45) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 10:46:36) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #7 of app/views/items/index.html.haml:
+4:   =item.name
+5:   =item.recipe
+6:   =item.loaded_recipe? ? "YES" : "NO"
+7:   =p item.recipe.time
+
+    app/views/items/index.html.haml:7:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.5ms)
+Rendered rescues/_request_and_response (67.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 17:57:06) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `loaded_recpie?' for #<Item:0x23697d0>) on line #5 of app/views/items/index.html.haml:
+2: 
+3: -@items.each do |item|
+4:   =item.name
+5:   =item.loaded_recpie? ? "YES" : "NO"
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   =p item.recipe.time
+
+    app/views/items/index.html.haml:5:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (105.8ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 17:57:08) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `loaded_recpie?' for #<Item:0x23a6798>) on line #5 of app/views/items/index.html.haml:
+2: 
+3: -@items.each do |item|
+4:   =item.name
+5:   =item.loaded_recpie? ? "YES" : "NO"
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   =p item.recipe.time
+
+    app/views/items/index.html.haml:5:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (122.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 17:57:08) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `loaded_recpie?' for #<Item:0x24bc4c0>) on line #5 of app/views/items/index.html.haml:
+2: 
+3: -@items.each do |item|
+4:   =item.name
+5:   =item.loaded_recpie? ? "YES" : "NO"
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   =p item.recipe.time
+
+    app/views/items/index.html.haml:5:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 17:57:17) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #8 of app/views/items/index.html.haml:
+5:   =item.loaded_recipe? ? "YES" : "NO"
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   =p item.recipe.time
+
+    app/views/items/index.html.haml:8:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 17:57:24) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #8 of app/views/items/index.html.haml:
+5:   =item.loaded_recipe? ? "YES" : "NO"
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   =p item.recipe.time
+
+    app/views/items/index.html.haml:8:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 17:57:47) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 17:58:12) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:01:07) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:01:21) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:01:33) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #10 of app/views/items/index.html.haml:
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.recipe.inspect
+10:   =item.recipe.time
+
+    app/views/items/index.html.haml:10:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (102.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:02:02) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #10 of app/views/items/index.html.haml:
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.recipe.inspect
+10:   =item.recipe.time
+
+    app/views/items/index.html.haml:10:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (117.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:02:30) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:02:50) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:03:07) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:03:21) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:03:31) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:04:19) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (private method `puts' called for []:Array) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.recipe.methods.select{|method|method=~/time/}.puts
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (106.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:04:44) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:05:20) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+ERROR: compiling _run_haml_app47views47items47index46html46haml RAISED compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47items47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :encoding=>nil, :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>Items</h1>\n", 0, false);@items.each do |item|;
+_hamlout.push_text("#{haml_temp = item.name
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.recipe
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);p item.recipe;
+_hamlout.push_text("", 0, false);haml_temp = item.recipe.methods.select{|method|method=~/time/}.each |method|;
+_hamlout.push_text("<p>#{_hamlout.adjust_tabs(1); haml_temp = "#{method}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n", 0, false);end;_erbout << _hamlout.format_script_false_false_false_false_false_false_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));_hamlout.push_text("\n", 0, false);end;@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zhansen/crazydr/app/views/items/index.html.haml:12:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.recipe.methods.select{|method|method=~/time/}.each |method|
+10:     %p #{method}
+
+    app/views/items/index.html.haml:12:in `compile!'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (108.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:05:51) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+ERROR: compiling _run_haml_app47views47items47index46html46haml RAISED compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47items47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :encoding=>nil, :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>Items</h1>\n", 0, false);@items.each do |item|;
+_hamlout.push_text("#{haml_temp = item.name
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.recipe
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);p item.recipe;
+item.recipe.methods.select{|method|method=~/time/}.each |method|;
+_hamlout.push_text("<p>#{_hamlout.adjust_tabs(1); haml_temp = "#{method}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n", 0, false);end;end;@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zhansen/crazydr/app/views/items/index.html.haml:12:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   -item.recipe.methods.select{|method|method=~/time/}.each |method|
+10:     %p #{method}
+
+    app/views/items/index.html.haml:12:in `compile!'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:05:52) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+ERROR: compiling _run_haml_app47views47items47index46html46haml RAISED compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47items47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :encoding=>nil, :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>Items</h1>\n", 0, false);@items.each do |item|;
+_hamlout.push_text("#{haml_temp = item.name
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.recipe
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);p item.recipe;
+item.recipe.methods.select{|method|method=~/time/}.each |method|;
+_hamlout.push_text("<p>#{_hamlout.adjust_tabs(1); haml_temp = "#{method}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n", 0, false);end;end;@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zhansen/crazydr/app/views/items/index.html.haml:12:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   -item.recipe.methods.select{|method|method=~/time/}.each |method|
+10:     %p #{method}
+
+    app/views/items/index.html.haml:12:in `compile!'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:05:53) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+ERROR: compiling _run_haml_app47views47items47index46html46haml RAISED compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47items47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :encoding=>nil, :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>Items</h1>\n", 0, false);@items.each do |item|;
+_hamlout.push_text("#{haml_temp = item.name
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.recipe
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);p item.recipe;
+item.recipe.methods.select{|method|method=~/time/}.each |method|;
+_hamlout.push_text("<p>#{_hamlout.adjust_tabs(1); haml_temp = "#{method}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n", 0, false);end;end;@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zhansen/crazydr/app/views/items/index.html.haml:12:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   -item.recipe.methods.select{|method|method=~/time/}.each |method|
+10:     %p #{method}
+
+    app/views/items/index.html.haml:12:in `compile!'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:05:53) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+ERROR: compiling _run_haml_app47views47items47index46html46haml RAISED compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47items47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :encoding=>nil, :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>Items</h1>\n", 0, false);@items.each do |item|;
+_hamlout.push_text("#{haml_temp = item.name
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.recipe
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);p item.recipe;
+item.recipe.methods.select{|method|method=~/time/}.each |method|;
+_hamlout.push_text("<p>#{_hamlout.adjust_tabs(1); haml_temp = "#{method}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n", 0, false);end;end;@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zhansen/crazydr/app/views/items/index.html.haml:12:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   -item.recipe.methods.select{|method|method=~/time/}.each |method|
+10:     %p #{method}
+
+    app/views/items/index.html.haml:12:in `compile!'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:05:54) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+ERROR: compiling _run_haml_app47views47items47index46html46haml RAISED compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47items47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :encoding=>nil, :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>Items</h1>\n", 0, false);@items.each do |item|;
+_hamlout.push_text("#{haml_temp = item.name
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.recipe
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp = item.loaded_recipe? ? "YES" : "NO"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);p item.recipe;
+item.recipe.methods.select{|method|method=~/time/}.each |method|;
+_hamlout.push_text("<p>#{_hamlout.adjust_tabs(1); haml_temp = "#{method}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n", 0, false);end;end;@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zhansen/crazydr/app/views/items/index.html.haml:12:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.8/lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zhansen/crazydr/app/views/items/index.html.haml:9: syntax error, unexpected ';'
+/Users/zhansen/crazydr/app/views/items/index.html.haml:12: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   -item.recipe.methods.select{|method|method=~/time/}.each |method|
+10:     %p #{method}
+
+    app/views/items/index.html.haml:12:in `compile!'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (110.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:06:06) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:06:28) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `|' for /time/:Regexp) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   -item.recipe.methods.select{|method|method=~/time/|1}.each do |method|
+10:     %p #{method}
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:9:in `select'
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:06:31) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:07:14) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #8 of app/views/items/index.html.haml:
+5:   =item.loaded_recipe? ? "YES" : "NO"
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe.id
+
+    app/views/items/index.html.haml:8:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:07:31) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:07:43) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:08:06) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 91ms (View: 85, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:08:13) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:08:17) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:08:37) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `super' for #<Class:0x235d6b0>) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.class.super.class
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:09:44) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `super' for #<Item:0x2360450>) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.super.class
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:09:46) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `super' for #<Item:0x23c0b70>) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.super.class
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (113.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:16:22) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `super' for #<Item:0x24e184c>) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.super.class
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:16:34) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 87ms (View: 81, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:16:50) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:46:08) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-15 18:59:11) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:13:04) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:13:12) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:13:13) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 91ms (View: 85, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:13:13) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:13:13) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:13:51) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 42ms (View: 27, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:09) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:17) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 82ms (View: 76, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:18) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:23) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:24) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:24) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:24) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:24) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:25) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:14:25) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:20:06) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:20:24) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.recipe.time
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (112.4ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:20:26) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.timelkj) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.recipe.timelkj
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (115.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:20:29) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:20:35) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:20:41) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `time' for #<Array:0x22c255c>) on line #9 of app/views/items/index.html.haml:
+6:   =item.recipe
+7:   =item.loaded_recipe? ? "YES" : "NO"
+8:   -p item.recipe
+9:   =item.recipe.methods.time
+
+    app/views/items/index.html.haml:9:in `_run_haml_app47views47items47index46html46haml'
+    app/views/items/index.html.haml:3:in `each'
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:27:08) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined local variable or method `recipe' for #<ActionView::Base:0x2363da8>) on line #3 of app/views/items/index.html.haml:
+1: %h1 Items
+2: 
+3: =recipe.item
+
+    app/views/items/index.html.haml:3:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:27:13) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM "items" WHERE ("items".recipe_id = 1) LIMIT 1[0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:27:31) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".recipe_id = 1) LIMIT 1[0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:27:36) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items".recipe_id = 1) LIMIT 1[0m
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:27:47) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".recipe_id = 1) LIMIT 1[0m
+Completed in 94ms (View: 9, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:28:12) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:31:38) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:31:39) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:31:39) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (110.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:31:39) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:31:39) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:31:40) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:31:46) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (103.2ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 00:32:09) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.item) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@items[0].recipe.item.name
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:22:34) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@item.recipe.time
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:22:52) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".recipe_id = 1) LIMIT 1[0m
+Completed in 96ms (View: 88, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:25:03) [GET]
+  [4;35;1mItem Load (1.0ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@item.recipe.time
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:25:25) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@item.recipe.time
+3: =@recipe.item.name
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:25:35) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.time) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@item.recipe.time
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:26:42) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:26:50) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (undefined method `recipes' for #<Item:0x22ba870>) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@item.recipes
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:26:52) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:26:55) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:27:15) [GET]
+  [4;35;1mRecipe Load (0.6ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.recipe) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2: =@item.recipe
+
+    app/views/items/index.html.haml:2:in `_run_haml_app47views47items47index46html46haml'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:27:24) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:27:27) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:27:29) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering items/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-16 01:27:46) [GET]
+
+SyntaxError (/Users/zhansen/crazydr/app/controllers/items_controller.rb:3: syntax error, unexpected tIDENTIFIER, expecting ']'
+    @item = Item.find( :all )[ 2s ]
+                                 ^
+/Users/zhansen/crazydr/app/controllers/items_controller.rb:10: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:27:50) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:27:56) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:28:07) [GET]
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:28:16) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 1) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items".recipe_id = 1) LIMIT 1[0m
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:38:29) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.) on line #2 of app/views/items/index.html.haml:
+1: %h1 Items
+2:   %ul
+3:     -@items.each do |item|
+4:       %li #{item.name}
+5: 
+
+    app/views/items/index.html.haml:2
+    haml (2.2.8) lib/haml/precompiler.rb:717:in `render_tag'
+    haml (2.2.8) lib/haml/precompiler.rb:204:in `process_line'
+    haml (2.2.8) lib/haml/precompiler.rb:168:in `precompile'
+    haml (2.2.8) lib/haml/engine.rb:113:in `initialize'
+    haml (2.2.8) lib/haml/template/plugin.rb:21:in `new'
+    haml (2.2.8) lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.2.8) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-16 01:38:48) [GET]
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".recipe_id = 1) LIMIT 1[0m
+Completed in 80ms (View: 72, DB: 1) | 200 OK [http://localhost/items/]

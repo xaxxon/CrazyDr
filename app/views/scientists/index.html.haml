@@ -1,0 +1,7 @@
+%h1 Scientists
+
+%ul
+  -@scientists.each do |scientist|
+    %li
+      =link_to scientist.name, scientist
+    
