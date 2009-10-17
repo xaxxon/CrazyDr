@@ -1,0 +1,23 @@
+%head
+  =stylesheet_link_tag "crazydr"
+
+
+%body
+  #header
+    %img{:src => "/images/crazydr.png"}
+    Crazy Dr.
+
+  #menubar
+    =render :partial => "items/menubar"
+
+  #left-column
+    .box
+      =render :partial => "items/projects"
+    .box
+      =render :partial => "items/skills"
+
+  #content
+    =yield
+
+
+  #footer

@@ -1,0 +1,6 @@
+%h1 Create new item
+
+-form_for :Item do |f|
+  .form_option
+    =f.label :name, "Name:"
+    =f.text_field :name

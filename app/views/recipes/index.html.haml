@@ -1,0 +1,7 @@
+%h1 Recipes
+%ul
+  -@recipes.each do |recipe|
+    %li #{recipe.item.name}
+
+=link_to "New Recipe", new_recipe_path
+
