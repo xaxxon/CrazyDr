@@ -1,7 +1,10 @@
 .title Skills
 %ul
-  %li Physics
-  %li Engineering
-  %li Electronics
+  -@skills.each do |skill|
+    %li
+      [ 
+      =link_to "X", statistic_path(skill), :confirm => "Are you sure you want to delete #{skill.name}?", :method => :delete
+      ]
+      =skill.name
 
 =link_to "New Skill", new_statistic_path

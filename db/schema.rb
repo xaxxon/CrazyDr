@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091015094322) do
+ActiveRecord::Schema.define(:version => 20091018100957) do
+
+  create_table "actions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "demands", :force => true do |t|
+    t.integer  "action_id"
+    t.integer  "skill_id"
+    t.integer  "level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ingredients", :force => true do |t|
     t.integer  "item_id"
@@ -33,8 +47,30 @@ ActiveRecord::Schema.define(:version => 20091015094322) do
     t.datetime "updated_at"
   end
 
+  create_table "productions", :force => true do |t|
+    t.integer  "action_id"
+    t.integer  "item_id"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "recipes", :force => true do |t|
     t.integer  "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "requirements", :force => true do |t|
+    t.integer  "item_id"
+    t.integer  "action_id"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scientist_skills", :force => true do |t|
+    t.integer  "level"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,6 +83,12 @@ ActiveRecord::Schema.define(:version => 20091015094322) do
   end
 
   create_table "scientists", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -7,6 +7,14 @@
     %img{:src => "/images/crazydr.png"}
     Crazy Dr.
 
+  #flash  
+    -if flash[ :notice ]
+      .notice
+        =flash[ :notice ]
+
+    
+    
+
   #menubar
     =render :partial => "items/menubar"
 

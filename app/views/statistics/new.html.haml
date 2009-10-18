@@ -1,0 +1,8 @@
+%h1 Create New Skill
+
+-form_for Statistic.new do |f|
+  .form-option
+    =f.label :name
+    =f.text_field :name
+  .form-option
+    =f.submit :Save

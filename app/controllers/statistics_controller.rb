@@ -9,9 +9,15 @@ class StatisticsController < ApplicationController
   end
 
   def create
+    Statistic.new( :name => params[ :statistic ][ :name ] ).save
+    
+    redirect_to recipes_path
   end
 
-  def delete
+  def destroy
+    @skill = Statistic.find_by_id params[ :id ]
+    flash[ :notice ] = "Deleted skill #{@skill.name}"
+    redirect_to recipes_path
   end
 
   def update

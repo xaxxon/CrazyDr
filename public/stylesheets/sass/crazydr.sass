@@ -1,5 +1,16 @@
+
+!main_color = #55f
+!secondary_color = #ccf
+
+
 #header
   font-size: 8em
+
+#flash
+  .notice
+    background-color: #afa
+    overflow: auto
+    float: left
 
 #menu_bar
   font-size: 4em
@@ -8,21 +19,27 @@
   width: 200px
   float: left
   background-color: white
-  border: 2px solid #aac
+  border-right = 2px solid !main_color
   padding: 5px
 
+
 .box
-  padding: 5px
-  border: 2px solid #99c
+  padding: 0
+  border: 2px solid #55f
   width: 80%
   margin: 5px auto 5px auto
+  ul 
+    padding: 8px
+    li
+      list-style-type: none
   .title
-    background-color: #55c
+    background-color: #55f
     color: white
-    padding: 2px
+    padding: 2px 0 1px 0
     text-align: center
     font-size: 1.5em
     width: 100%
+    border-bottom: 2px solid #55f
 
 
 #content
@@ -33,18 +50,17 @@ div
   padding: 5px
 
 
-
 // tabs
 
 .tabs 
-  border-bottom: 2px solid blue
+  border-bottom = 2px solid !main_color
   padding-bottom: 0
   ul
     overflow: auto
     margin: 0
     li
       &:hover
-        background-color: #ccf
+        background-color = !secondary_color
       list-style-type: none
       float: left
       // top, right, bottom, left
