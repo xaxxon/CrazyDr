@@ -10615,3 +10615,67 @@ Rendered items/_menubar (0.2ms)
 Rendered items/_projects (0.1ms)
 Rendered items/_skills (1.7ms)
 Completed in 28ms (View: 12, DB: 2) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 03:15:32) [GET]
+  [4;36;1mStatistic Load (1.3ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (1.6ms)
+Rendered items/_projects (1.3ms)
+Rendered items/_skills (3.6ms)
+Completed in 127ms (View: 100, DB: 2) | 200 OK [http://localhost/items]
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-19 03:15:35) [GET]
+  [4;35;1mStatistic Load (1.1ms)[0m   [0mSELECT * FROM "statistics" [0m
+  [4;36;1mScientist Load (0.4ms)[0m   [0;1mSELECT * FROM "scientists" [0m
+Rendering template within layouts/crazydr
+Rendering scientists/index
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.7ms)
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://localhost/scientists]
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-19 03:15:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStatistic Load (1.1ms)[0m   [0mSELECT * FROM "statistics" [0m
+  [4;36;1mScientist Load (0.3ms)[0m   [0;1mSELECT * FROM "scientists" WHERE ("scientists"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/crazydr
+Rendering scientists/show
+  [4;35;1mInventory Load (0.5ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories".scientist_id = 1) [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 2) [0m
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.2ms)
+Rendered items/_skills (2.3ms)
+Completed in 107ms (View: 94, DB: 2) | 200 OK [http://localhost/scientists/1]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 03:15:39) [GET]
+  [4;36;1mStatistic Load (1.6ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.8ms)
+Completed in 23ms (View: 6, DB: 2) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-10-19 03:15:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStatistic Load (1.3ms)[0m   [0mSELECT * FROM "statistics" [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/crazydr
+Rendering items/show
+  [4;35;1mInventory Load (0.4ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories".item_id = 1) [0m
+  [4;36;1mScientist Load (0.3ms)[0m   [0;1mSELECT * FROM "scientists" WHERE ("scientists"."id" = 1) [0m
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.8ms)
+Completed in 34ms (View: 21, DB: 2) | 200 OK [http://localhost/items/1]

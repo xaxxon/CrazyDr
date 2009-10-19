@@ -1,3 +1,4 @@
+# Specifies that a scientist has some number of an item
 class Inventory < ActiveRecord::Base
   belongs_to :scientist
   belongs_to :item
