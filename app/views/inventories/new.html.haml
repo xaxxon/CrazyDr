@@ -1,0 +1,14 @@
+%h1 Create New Inventory
+
+-form_for @inventory do |f|
+  .form-option
+    =f.label :scientist_id
+    =f.text_field :scientist_id
+  .form-option
+    =f.label :item_id
+    =f.text_field :item_id
+  .form-option
+    =f.label :count
+    =f.text_field :count
+
+  =f.submit "Create"

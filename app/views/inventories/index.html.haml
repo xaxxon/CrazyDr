@@ -1,0 +1,11 @@
+%h1 Inventory by Scientist
+
+%ul
+  -@inventory_by_scientist.each_pair do |scientist, inventories|
+    %li
+      =scientist.name
+      %ul
+        -inventories.each do |inventory|
+          %li #{inventory.item.name} #{inventory.count}
+              
+=link_to "New Inventory", new_inventory_path

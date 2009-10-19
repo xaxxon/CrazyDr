@@ -38,9 +38,10 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.resources :scientists
+  map.resources :scientists, :member => [ :inventory ]
   map.resources :items
   map.resources :recipes
   map.resources :statistics
   map.resources :projects
+  map.resources :inventories
 end

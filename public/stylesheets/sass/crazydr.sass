@@ -1,6 +1,6 @@
 
-!main_color = #55f
-!secondary_color = #ccf
+!main_color = #339
+!secondary_color = #aac
 
 
 #header
@@ -25,7 +25,7 @@
 
 .box
   padding: 0
-  border: 2px solid #55f
+  border = 2px solid !main_color
   width: 80%
   margin: 5px auto 5px auto
   ul 
@@ -33,16 +33,21 @@
     li
       list-style-type: none
   .title
-    background-color: #55f
+    background-color = !main_color
     color: white
     padding: 2px 0 1px 0
     text-align: center
     font-size: 1.5em
     width: 100%
-    border-bottom: 2px solid #55f
+    border-bottom = 2px solid !main_color
 
 
-#content
+.form-option
+  label
+    display: block
+    float: left
+    width: 65px
+
 
 // Divs will be overflow: auto by default
 div
@@ -65,7 +70,7 @@ div
       float: left
       // top, right, bottom, left
       padding: 7px 10px 3px 10px
-      border = 2px solid blue
+      border = 2px solid !main_color
       border-bottom: 0
       -moz-border-radius-topleft: 9px
       -moz-border-radius-topright: 9px

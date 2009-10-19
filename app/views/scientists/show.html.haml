@@ -1,1 +1,8 @@
 %h1 Scientist #{@scientist.name}
+
+#h3 Inventory
+
+%ul
+  -@scientist.inventories.each do |inventory|
+    %li
+      ="#{inventory.item.name} x#{inventory.count}"
