@@ -1,0 +1,11 @@
+%h1 #{@scientist.name.capitalize} Inventory
+
+%table
+  -@scientist.inventories.each do |i|
+    %tr
+      %td
+        =i.item.name
+      %td
+        =i.count
+
+

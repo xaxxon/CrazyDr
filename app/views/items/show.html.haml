@@ -1,0 +1,6 @@
+%h1 #{@item.name}
+
+%h3 In inventories of
+
+-@item.inventories.each do |inventory|
+  %p #{inventory.scientist.name} x#{inventory.count}
