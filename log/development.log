@@ -10679,3 +10679,121 @@ Rendered items/_menubar (0.2ms)
 Rendered items/_projects (0.1ms)
 Rendered items/_skills (1.8ms)
 Completed in 34ms (View: 21, DB: 2) | 200 OK [http://localhost/items/1]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 12:05:45) [GET]
+  [4;36;1mStatistic Load (1.3ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+
+NameError (uninitialized constant ItemsController::Recipe):
+  app/controllers/items_controller.rb:7:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (104.1ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 12:05:46) [GET]
+  [4;36;1mStatistic Load (1.2ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+
+NameError (uninitialized constant ItemsController::Recipe):
+  app/controllers/items_controller.rb:7:in `index'
+  haml (2.2.8) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 12:07:00) [GET]
+  [4;36;1mStatistic Load (1.2ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (1.6ms)
+Rendered items/_projects (1.2ms)
+Rendered items/_skills (3.2ms)
+Completed in 123ms (View: 111, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 12:08:04) [GET]
+  [4;36;1mStatistic Load (1.2ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (0.1ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.7ms)
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 12:08:31) [GET]
+  [4;36;1mStatistic Load (1.2ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (2.3ms)
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 12:08:44) [GET]
+  [4;36;1mStatistic Load (1.2ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.7ms)
+Completed in 18ms (View: 6, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 12:09:50) [GET]
+  [4;36;1mStatistic Load (1.2ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.7ms)
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-10-19 18:32:14) [GET]
+  [4;36;1mStatistic Load (1.3ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/crazydr
+Rendering items/index
+Rendered items/_menubar (0.1ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.6ms)
+Completed in 20ms (View: 6, DB: 2) | 200 OK [http://localhost/items/]
+
+
+Processing ScientistsController#index (for 127.0.0.1 at 2009-10-19 18:32:54) [GET]
+  [4;36;1mStatistic Load (1.5ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mScientist Load (0.4ms)[0m   [0mSELECT * FROM "scientists" [0m
+Rendering template within layouts/crazydr
+Rendering scientists/index
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.7ms)
+Completed in 28ms (View: 14, DB: 2) | 200 OK [http://localhost/scientists]
+
+
+Processing ScientistsController#show (for 127.0.0.1 at 2009-10-19 18:32:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStatistic Load (1.1ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+  [4;35;1mScientist Load (0.3ms)[0m   [0mSELECT * FROM "scientists" WHERE ("scientists"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/crazydr
+Rendering scientists/show
+  [4;36;1mInventory Load (0.5ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories".scientist_id = 1) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 1) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 2) [0m
+Rendered items/_menubar (0.2ms)
+Rendered items/_projects (0.1ms)
+Rendered items/_skills (1.7ms)
+Completed in 44ms (View: 31, DB: 2) | 200 OK [http://localhost/scientists/1]
