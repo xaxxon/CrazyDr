@@ -40,8 +40,12 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.resources :scientists, :member => [ :inventory ]
   map.resources :items
-  map.resources :recipes
   map.resources :statistics
-  map.resources :projects
   map.resources :inventories
+  map.resources :actions
+  map.resources :projects
+  map.resources :requirements
+  map.resources :ingredients
+  map.resources :demands
+  map.resources :productions
 end
